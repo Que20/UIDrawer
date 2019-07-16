@@ -5,6 +5,14 @@ UIDrawer is a customizable UIPresentationController that allows modals to be pre
 
 ![Demo screenshot](https://raw.githubusercontent.com/Que20/UIDrawer/master/demo.gif)
 
+## Installation
+
+[Carthage](https://github.com/Carthage/Carthage) is a decentralized dependency manager that builds your dependencies and provides you with binary frameworks. To integrate Alamofire into your Xcode project using Carthage, specify it in your `Cartfile`:
+
+```ogdl
+github "Que20/UIDrawer" ~> 0.1
+```
+
 ## Usage
 
 Present your drawer like a normal modal with a presentation style set as custom and set a transition delegate :
