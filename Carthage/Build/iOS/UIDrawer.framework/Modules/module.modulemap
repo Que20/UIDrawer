@@ -1,0 +1,11 @@
+framework module UIDrawer {
+  umbrella header "UIDrawer.h"
+
+  export *
+  module * { export * }
+}
+
+module UIDrawer.Swift {
+    header "UIDrawer-Swift.h"
+    requires objc
+}
