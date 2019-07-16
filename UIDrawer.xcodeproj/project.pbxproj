@@ -14,6 +14,7 @@
 		70BDCE8C22DE08010076D4F2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 70BDCE8B22DE08010076D4F2 /* Assets.xcassets */; };
 		70BDCE8F22DE08010076D4F2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 70BDCE8D22DE08010076D4F2 /* LaunchScreen.storyboard */; };
 		70BDCE9722DE09FA0076D4F2 /* DrawerPresentationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70BDCE9622DE09FA0076D4F2 /* DrawerPresentationController.swift */; };
+		70BDCE9922DE0A5A0076D4F2 /* DrawerPresentationControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70BDCE9822DE0A5A0076D4F2 /* DrawerPresentationControllerDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		70BDCE8E22DE08010076D4F2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		70BDCE9022DE08010076D4F2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		70BDCE9622DE09FA0076D4F2 /* DrawerPresentationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawerPresentationController.swift; sourceTree = "<group>"; };
+		70BDCE9822DE0A5A0076D4F2 /* DrawerPresentationControllerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawerPresentationControllerDelegate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +74,7 @@
 				7021947822DE061A00271DA2 /* UIDrawer.h */,
 				7021947922DE061A00271DA2 /* Info.plist */,
 				70BDCE9622DE09FA0076D4F2 /* DrawerPresentationController.swift */,
+				70BDCE9822DE0A5A0076D4F2 /* DrawerPresentationControllerDelegate.swift */,
 			);
 			path = UIDrawer;
 			sourceTree = "<group>";
@@ -202,6 +205,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				70BDCE9722DE09FA0076D4F2 /* DrawerPresentationController.swift in Sources */,
+				70BDCE9922DE0A5A0076D4F2 /* DrawerPresentationControllerDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
