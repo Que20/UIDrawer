@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  DrawerViewController.swift
 //  Example
 //
 //  Created by Personnal on 16/07/2019.
@@ -7,18 +7,15 @@
 //
 
 import UIKit
-import UIDrawer
 
-class ViewController: UIViewController {
+class DrawerViewController: UIViewController {
     
     lazy var button: UIButton = {
-        let button: UIButton = UIButton()
+        let button: UIButton = UIButton(type: .system)
         button.translatesAutoresizingMaskIntoConstraints = false
-        button.setTitle("Show Drawer", for: .normal)
+        button.setTitle("Close", for: .normal)
         button.addTarget(self, action: #selector(buttonAction), for: .touchUpInside)
-        button.backgroundColor = .red
         button.contentEdgeInsets = UIEdgeInsets(top: 10, left: 10, bottom: 10, right: 10)
-        button.layer.cornerRadius = 8
         return button
     }()
     
@@ -41,31 +38,12 @@ class ViewController: UIViewController {
         self.view.addSubview(self.button)
         NSLayoutConstraint.activate([
             self.button.centerXAnchor.constraint(equalTo: self.view.centerXAnchor),
-            self.button.centerYAnchor.constraint(equalTo: self.view.centerYAnchor)
+            self.button.topAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.topAnchor, constant: 30)
             ])
     }
     
     @objc public func buttonAction() {
-        self.presentDrawer()
-    }
-    
-    func presentDrawer() {
-        let viewController = DrawerViewController()
-        viewController.modalPresentationStyle = .custom
-        viewController.transitioningDelegate = self
-        self.present(viewController, animated: true)
-    }
-}
-
-extension ViewController: DrawerPresentationControllerDelegate {
-    func drawerMovedTo(position: DraweSnapPoint) {
-        
-    }
-}
-
-extension ViewController: UIViewControllerTransitioningDelegate {
-    func presentationController(forPresented presented: UIViewController, presenting: UIViewController?, source: UIViewController) -> UIPresentationController? {
-        return DrawerPresentationController(presentedViewController: presented, presenting: presenting, drawerDelegate: self, blurEffectStyle: .dark, cornerRadius: 20)
+        self.dismiss(animated: true)
     }
 }
 

@@ -8,7 +8,7 @@
 
 import Foundation
 
-class DrawerPresentationController: UIPresentationController {
+public class DrawerPresentationController: UIPresentationController {
     
     public weak var drawerDelegate: DrawerPresentationControllerDelegate?
     public var blurEffectStyle: UIBlurEffect.Style = .light
@@ -26,7 +26,7 @@ class DrawerPresentationController: UIPresentationController {
         return blur
     }()
     
-    override var frameOfPresentedViewInContainerView: CGRect {
+    override public var frameOfPresentedViewInContainerView: CGRect {
         return CGRect(origin: CGPoint(x: 0, y: self.containerView!.frame.height/2), size: CGSize(width: (self.width == 0 ? self.containerView!.frame.width : self.width), height: self.containerView!.frame.height-self.topGap))
     }
     
@@ -39,19 +39,20 @@ class DrawerPresentationController: UIPresentationController {
         return pan
     }()
     
-    public convenience init(presentedViewController: UIViewController, presenting presentingViewController: UIViewController?, drawerDelegate: DrawerPresentationControllerDelegate? = nil, blurEffectStyle: UIBlurEffect.Style = .light, topGap: CGFloat = 88, width: CGFloat = 0) {
+    public convenience init(presentedViewController: UIViewController, presenting presentingViewController: UIViewController?, drawerDelegate: DrawerPresentationControllerDelegate? = nil, blurEffectStyle: UIBlurEffect.Style = .light, topGap: CGFloat = 88, width: CGFloat = 0, cornerRadius: CGFloat = 44) {
         self.init(presentedViewController: presentedViewController, presenting: presentingViewController)
         self.drawerDelegate = drawerDelegate
         self.blurEffectStyle = blurEffectStyle
         self.topGap = topGap
         self.width = width
+        self.cornerRadius = cornerRadius
     }
     
     override init(presentedViewController: UIViewController, presenting presentingViewController: UIViewController?) {
         super.init(presentedViewController: presentedViewController, presenting: presentingViewController)
     }
     
-    override func dismissalTransitionWillBegin() {
+    override public func dismissalTransitionWillBegin() {
         self.presentedViewController.transitionCoordinator?.animate(alongsideTransition: { (UIViewControllerTransitionCoordinatorContext) in
             self.blurEffectView.alpha = 0
         }, completion: { (UIViewControllerTransitionCoordinatorContext) in
@@ -59,7 +60,7 @@ class DrawerPresentationController: UIPresentationController {
         })
     }
     
-    override func presentationTransitionWillBegin() {
+    override public func presentationTransitionWillBegin() {
         self.blurEffectView.alpha = 0
         self.containerView?.addSubview(blurEffectView)
         self.presentedViewController.transitionCoordinator?.animate(alongsideTransition: { (UIViewControllerTransitionCoordinatorContext) in
@@ -69,14 +70,14 @@ class DrawerPresentationController: UIPresentationController {
         })
     }
     
-    override func containerViewWillLayoutSubviews() {
+    override public func containerViewWillLayoutSubviews() {
         super.containerViewWillLayoutSubviews()
         presentedView!.layer.masksToBounds = true
         presentedView?.roundCorners(corners: [.topLeft, .topRight], radius: self.cornerRadius)
         presentedView!.addGestureRecognizer(self.panGesture)
     }
     
-    override func containerViewDidLayoutSubviews() {
+    override public func containerViewDidLayoutSubviews() {
         super.containerViewDidLayoutSubviews()
         self.presentedView?.frame = frameOfPresentedViewInContainerView
         self.presentedView?.frame.origin.x = (containerView!.frame.width - presentedView!.frame.width) / 2

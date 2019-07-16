@@ -8,11 +8,11 @@
 
 import Foundation
 
-protocol DrawerPresentationControllerDelegate: class {
+public protocol DrawerPresentationControllerDelegate: class {
     func drawerMovedTo(position: DraweSnapPoint)
 }
 
-enum DraweSnapPoint {
+public enum DraweSnapPoint {
     case top
     case middle
     case close

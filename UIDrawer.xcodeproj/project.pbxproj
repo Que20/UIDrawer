@@ -10,11 +10,12 @@
 		7021947A22DE061A00271DA2 /* UIDrawer.h in Headers */ = {isa = PBXBuildFile; fileRef = 7021947822DE061A00271DA2 /* UIDrawer.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		70BDCE8522DE07FF0076D4F2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70BDCE8422DE07FF0076D4F2 /* AppDelegate.swift */; };
 		70BDCE8722DE07FF0076D4F2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70BDCE8622DE07FF0076D4F2 /* ViewController.swift */; };
-		70BDCE8A22DE07FF0076D4F2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 70BDCE8822DE07FF0076D4F2 /* Main.storyboard */; };
 		70BDCE8C22DE08010076D4F2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 70BDCE8B22DE08010076D4F2 /* Assets.xcassets */; };
 		70BDCE8F22DE08010076D4F2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 70BDCE8D22DE08010076D4F2 /* LaunchScreen.storyboard */; };
 		70BDCE9722DE09FA0076D4F2 /* DrawerPresentationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70BDCE9622DE09FA0076D4F2 /* DrawerPresentationController.swift */; };
 		70BDCE9922DE0A5A0076D4F2 /* DrawerPresentationControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70BDCE9822DE0A5A0076D4F2 /* DrawerPresentationControllerDelegate.swift */; };
+		70F3DE5E22DE291F0048CD4C /* DrawerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70F3DE5D22DE291F0048CD4C /* DrawerViewController.swift */; };
+		70F3DE6022DE2B770048CD4C /* UIDrawer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7021947522DE061A00271DA2 /* UIDrawer.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,12 +25,12 @@
 		70BDCE8222DE07FF0076D4F2 /* Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		70BDCE8422DE07FF0076D4F2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		70BDCE8622DE07FF0076D4F2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		70BDCE8922DE07FF0076D4F2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		70BDCE8B22DE08010076D4F2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		70BDCE8E22DE08010076D4F2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		70BDCE9022DE08010076D4F2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		70BDCE9622DE09FA0076D4F2 /* DrawerPresentationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawerPresentationController.swift; sourceTree = "<group>"; };
 		70BDCE9822DE0A5A0076D4F2 /* DrawerPresentationControllerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawerPresentationControllerDelegate.swift; sourceTree = "<group>"; };
+		70F3DE5D22DE291F0048CD4C /* DrawerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawerViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -44,6 +45,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				70F3DE6022DE2B770048CD4C /* UIDrawer.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -56,6 +58,7 @@
 				7021947722DE061A00271DA2 /* UIDrawer */,
 				70BDCE8322DE07FF0076D4F2 /* Example */,
 				7021947622DE061A00271DA2 /* Products */,
+				70F3DE5F22DE2B770048CD4C /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -84,12 +87,19 @@
 			children = (
 				70BDCE8422DE07FF0076D4F2 /* AppDelegate.swift */,
 				70BDCE8622DE07FF0076D4F2 /* ViewController.swift */,
-				70BDCE8822DE07FF0076D4F2 /* Main.storyboard */,
+				70F3DE5D22DE291F0048CD4C /* DrawerViewController.swift */,
 				70BDCE8B22DE08010076D4F2 /* Assets.xcassets */,
 				70BDCE8D22DE08010076D4F2 /* LaunchScreen.storyboard */,
 				70BDCE9022DE08010076D4F2 /* Info.plist */,
 			);
 			path = Example;
+			sourceTree = "<group>";
+		};
+		70F3DE5F22DE2B770048CD4C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -193,7 +203,6 @@
 			files = (
 				70BDCE8F22DE08010076D4F2 /* LaunchScreen.storyboard in Resources */,
 				70BDCE8C22DE08010076D4F2 /* Assets.xcassets in Resources */,
-				70BDCE8A22DE07FF0076D4F2 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -215,20 +224,13 @@
 			files = (
 				70BDCE8722DE07FF0076D4F2 /* ViewController.swift in Sources */,
 				70BDCE8522DE07FF0076D4F2 /* AppDelegate.swift in Sources */,
+				70F3DE5E22DE291F0048CD4C /* DrawerViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		70BDCE8822DE07FF0076D4F2 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				70BDCE8922DE07FF0076D4F2 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		70BDCE8D22DE08010076D4F2 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
