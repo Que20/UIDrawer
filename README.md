@@ -1,6 +1,12 @@
 # UIDrawer
 UIDrawer is a customizable UIPresentationController that allows modals to be presented like a bottom sheet. The kind of UI widget you can see on the Maps app on iOS.
 
+It supports :
+- Dragging up and down
+- Multiple snap points (half and top by default)
+- Swipe down to close
+- Customization
+
 ## Screenshot
 
 ![Demo screenshot](https://raw.githubusercontent.com/Que20/UIDrawer/master/demo.gif)
