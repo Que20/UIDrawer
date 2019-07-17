@@ -65,7 +65,7 @@ extension ViewController: DrawerPresentationControllerDelegate {
 
 extension ViewController: UIViewControllerTransitioningDelegate {
     func presentationController(forPresented presented: UIViewController, presenting: UIViewController?, source: UIViewController) -> UIPresentationController? {
-        return DrawerPresentationController(presentedViewController: presented, presenting: presenting, drawerDelegate: self, blurEffectStyle: .dark, cornerRadius: 20)
+        return DrawerPresentationController(presentedViewController: presented, presenting: presenting, blurEffectStyle: .dark)
     }
 }
 

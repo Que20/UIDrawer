@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		7021947A22DE061A00271DA2 /* UIDrawer.h in Headers */ = {isa = PBXBuildFile; fileRef = 7021947822DE061A00271DA2 /* UIDrawer.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		70A4785C22DF1F5F000C6391 /* UIDrawer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7021947522DE061A00271DA2 /* UIDrawer.framework */; };
+		70A4785D22DF1F5F000C6391 /* UIDrawer.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 7021947522DE061A00271DA2 /* UIDrawer.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		70BDCE8522DE07FF0076D4F2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70BDCE8422DE07FF0076D4F2 /* AppDelegate.swift */; };
 		70BDCE8722DE07FF0076D4F2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70BDCE8622DE07FF0076D4F2 /* ViewController.swift */; };
 		70BDCE8C22DE08010076D4F2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 70BDCE8B22DE08010076D4F2 /* Assets.xcassets */; };
@@ -15,8 +17,31 @@
 		70BDCE9722DE09FA0076D4F2 /* DrawerPresentationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70BDCE9622DE09FA0076D4F2 /* DrawerPresentationController.swift */; };
 		70BDCE9922DE0A5A0076D4F2 /* DrawerPresentationControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70BDCE9822DE0A5A0076D4F2 /* DrawerPresentationControllerDelegate.swift */; };
 		70F3DE5E22DE291F0048CD4C /* DrawerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70F3DE5D22DE291F0048CD4C /* DrawerViewController.swift */; };
-		70F3DE6022DE2B770048CD4C /* UIDrawer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7021947522DE061A00271DA2 /* UIDrawer.framework */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		70A4785E22DF1F5F000C6391 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7021946C22DE061A00271DA2 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7021947422DE061A00271DA2;
+			remoteInfo = UIDrawer;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		70A4786022DF1F5F000C6391 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				70A4785D22DF1F5F000C6391 /* UIDrawer.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		7021947522DE061A00271DA2 /* UIDrawer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = UIDrawer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -45,7 +70,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				70F3DE6022DE2B770048CD4C /* UIDrawer.framework in Frameworks */,
+				70A4785C22DF1F5F000C6391 /* UIDrawer.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -141,10 +166,12 @@
 				70BDCE7E22DE07FF0076D4F2 /* Sources */,
 				70BDCE7F22DE07FF0076D4F2 /* Frameworks */,
 				70BDCE8022DE07FF0076D4F2 /* Resources */,
+				70A4786022DF1F5F000C6391 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				70A4785F22DF1F5F000C6391 /* PBXTargetDependency */,
 			);
 			name = Example;
 			productName = Example;
@@ -229,6 +256,14 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		70A4785F22DF1F5F000C6391 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 7021947422DE061A00271DA2 /* UIDrawer */;
+			targetProxy = 70A4785E22DF1F5F000C6391 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		70BDCE8D22DE08010076D4F2 /* LaunchScreen.storyboard */ = {
@@ -418,6 +453,7 @@
 		70BDCE9122DE08010076D4F2 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = Example/Info.plist;
@@ -435,6 +471,7 @@
 		70BDCE9222DE08010076D4F2 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = Example/Info.plist;
