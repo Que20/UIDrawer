@@ -3,7 +3,7 @@ UIDrawer is a customizable UIPresentationController that allows modals to be pre
 
 It supports :
 - Dragging up and down
-- Multiple snap points (half and top by default)
+- Multiple snap points (half and top)
 - Swipe down to close
 - Customization
 
@@ -47,7 +47,20 @@ You can customize the DrawerPresentationController by setting :
 - The gap from the top of the modal to the top of the parent
 
       let presentationController = DrawerPresentationController(presentedViewController: presented, presenting: presenting)
+      
       presentationController.blurEffectStyle = .extraLight
       presentationController.cornerRadius = 20
-      presentationController.width = 200
+      presentationController.roundedCorners = [.topLeft, .topRight]
+      presentationController.modalWidth = 200
       presentationController.topGap = 80
+      presentationController.bounce = true
+
+## Evolutions
+
+A quick todo list for features I want to implement in the futur :
+- Custom snap points
+- Automatic handling of scrollview's gesture (e.g. a modal that would have a TableView) to swipe up the drawer
+
+## Contribute
+
+Please ;)
