@@ -13,11 +13,24 @@ It supports :
 
 ## Installation
 
+### Carthage
+
 [Carthage](https://github.com/Carthage/Carthage) is a decentralized dependency manager that builds your dependencies and provides you with binary frameworks. To integrate Alamofire into your Xcode project using Carthage, specify it in your `Cartfile`:
 
 ```ogdl
 github "Que20/UIDrawer" ~> 1.0
 ```
+
+### CocoaPod
+[CocoaPods](https://cocoapods.org) is a dependency manager for Cocoa projects. For usage and installation instructions, visit their website. To integrate Alamofire into your Xcode project using CocoaPods, specify it in your `Podfile`:
+
+
+    platform :ios, '12.0'
+    target 'TestImportPod' do
+      use_frameworks!
+      pod 'UIDrawer', '~> 1.0'
+    end
+
 
 ## Usage
 
@@ -58,6 +71,7 @@ You can customize the DrawerPresentationController by setting :
 ## Evolutions
 
 A quick todo list for features I want to implement in the futur :
+- Install via Swift Package Manager
 - Custom snap points
 - Automatic handling of scrollview's gesture (e.g. a modal that would have a TableView) to swipe up the drawer
 
