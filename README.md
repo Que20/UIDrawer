@@ -24,11 +24,10 @@ github "Que20/UIDrawer" ~> 1.0
 ### CocoaPod
 [CocoaPods](https://cocoapods.org) is a dependency manager for Cocoa projects. For usage and installation instructions, visit their website. To integrate Alamofire into your Xcode project using CocoaPods, specify it in your `Podfile`:
 
-
     platform :ios, '12.0'
-    target 'TestImportPod' do
-      use_frameworks!
-      pod 'UIDrawer', '~> 1.0'
+    target 'YourTarget' do
+        use_frameworks!
+        pod 'UIDrawer', :git => 'https://github.com/Que20/UIDrawer.git', :tag => '1.0'
     end
 
 
